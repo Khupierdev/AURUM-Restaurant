@@ -1,0 +1,15 @@
+# robots.txt — AURUM Restaurant
+# https://www.aurumrestaurant.es/
+
+User-agent: *
+Allow: /
+
+# Block sensitive paths (none in this static site, but good practice)
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.aurumrestaurant.es/sitemap.xml
+
+# Crawl delay (optional, respects server load)
+Crawl-delay: 1

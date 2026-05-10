@@ -1,0 +1,215 @@
+/* ============================================
+   AURUM RESTAURANT — Responsive Styles
+   ============================================ */
+
+/* --- Tablet (≤1024px) --- */
+@media (max-width: 1024px) {
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .about-image-frame img {
+    height: 420px;
+  }
+
+  .menu-panel.active {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .experience-header {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .gallery-item:first-child {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+
+  .gallery-item:first-child img {
+    height: 380px;
+  }
+
+  .gallery-item:not(:first-child) img {
+    height: 220px;
+  }
+
+  .reservas-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .reservas-info {
+    position: static;
+  }
+
+  .contacto-top {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+
+  .testimonio-card {
+    flex: 0 0 calc(50% - var(--space-3));
+  }
+}
+
+/* --- Mobile (≤768px) --- */
+@media (max-width: 768px) {
+
+  /* Nav */
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .nav-mobile {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero-bottom {
+    gap: var(--space-4);
+  }
+
+  .hero-stat-number {
+    font-size: var(--text-lg);
+  }
+
+  /* Menu */
+  .menu-panel.active {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-tabs {
+    gap: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    padding-bottom: 0;
+  }
+
+  .menu-tab {
+    white-space: nowrap;
+    padding-inline: var(--space-5);
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item:first-child {
+    grid-column: span 1;
+  }
+
+  .gallery-item:first-child img,
+  .gallery-item:not(:first-child) img {
+    height: 260px;
+  }
+
+  /* Form */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-submit {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  /* Testimonios */
+  .testimonio-card {
+    flex: 0 0 calc(90% - var(--space-3));
+  }
+
+  /* Footer */
+  .contacto-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    grid-column: span 1;
+  }
+
+  .contacto-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-4);
+  }
+
+  /* About */
+  .about-values {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Small mobile (≤480px) --- */
+@media (max-width: 480px) {
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-6) var(--space-8);
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  .section-label {
+    font-size: 10px;
+  }
+}
+
+/* --- Large screens (≥1440px) --- */
+@media (min-width: 1440px) {
+
+  .gallery-item:first-child img {
+    height: 720px;
+  }
+
+  .gallery-item:not(:first-child) img {
+    height: 348px;
+  }
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
